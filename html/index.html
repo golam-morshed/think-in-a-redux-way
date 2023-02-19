@@ -7,6 +7,10 @@
         <title>LWS Assignment 1 - Scoreboard</title>
         <link rel="icon" type="image/x-icon" href="./image/favicon.png" />
         <link rel="stylesheet" href="./style.css" />
+        <!-- import redux from cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.js"
+            integrity="sha512-Olr8rkMYuxq3KpAPjYA/mAVYe7EIEP4RkhoAvD/qOrlauzE4CTvpQSg/cRX0/5Qreret4aobD0vg1xtjBqR7VA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
 
     <body>
@@ -26,42 +30,13 @@
                 </div>
             </header>
             <!-- matches  -->
-            <div class="all-matches container">
+            <div class="all-matches container" id="matches">
                 <!-- Each form tag is Each row, This will render multiple times on Clicking 'Add Another Match' -->
-                <div class="match">
-                    <div class="wrapper">
-                        <button class="lws-delete">
-                            <img src="./image/delete.svg" alt="" />
-                        </button>
-                        <h3 class="lws-matchName">Match 1</h3>
-                    </div>
-                    <div class="inc-dec">
-                        <form class="incrementForm">
-                            <h4>Increment</h4>
-                            <input
-                                type="number"
-                                name="increment"
-                                class="lws-increment"
-                            />
-                        </form>
-                        <form class="decrementForm">
-                            <h4>Decrement</h4>
-                            <input
-                                type="number"
-                                name="decrement"
-                                class="lws-decrement"
-                            />
-                        </form>
-                    </div>
-                    <div class="numbers">
-                        <h2 class="lws-singleResult">120</h2>
-                    </div>
-                </div>
             </div>
             <!-- for adding another matches -->
             <div class="add_match">
-                <button class="btn lws-addMatch">Add Another Match</button>
-                <button class="lws-reset">
+                <button class="btn lws-addMatch" id="add_new_match">Add Another Match</button>
+                <button class="lws-reset" id="reset">
                     <svg
                         fill="none"
                         width="24"
@@ -84,5 +59,6 @@
         </section>
 
         <section class="mask"></section>
+        <script src="./script.js"></script>
     </body>
 </html>
