@@ -1,1 +1,3 @@
-import { combineReducers, createStore } from "redux";
+import { createStore } from "redux";
+
+const store = createStore(rootReducer);
